@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Publicaciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-item>
+    <ion-label position="floating">Título (Ingrese mínimo 5 caracteres)</ion-label>
+    <ion-input [(ngModel)]="nuevoPublicaciones.titulo" minlength="5" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción (Ingrese mínimo 20 caracteres)</ion-label>
+    <ion-textarea [(ngModel)]="nuevoPublicaciones.descripcion" minlength="20" required></ion-textarea>
+  </ion-item>
+
+  
+  <ion-buttons slot="start">
+    <ion-button size="small" fill="outline" [routerLink]="['/camara']">TomarFotografia
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  
+  <img *ngIf="imagenData" [src]="imagenData" alt="Foto">
+
+  <ion-buttons slot="end">
+    <ion-button size="small" fill="outline" (click)="agregarPublicacion()">Guardar</ion-button>
+    <ion-button size="small" fill="outline" [routerLink]="['/home']">Home</ion-button>
+  </ion-buttons>

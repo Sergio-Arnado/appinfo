@@ -25,3 +25,18 @@
 #container a {
   text-decoration: none;
 }
+
+.floating-button-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos en la página */
+}
+
+.floating-button {
+  font-size: 1.5rem; /* Ajusta el tamaño del botón según tus preferencias */
+}
+
+.eliminar-boton {
+  margin-top: 100px; /* Ajusta la cantidad de espacio entre el botón y el contenido de la tarjeta */
+}
